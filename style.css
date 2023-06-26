@@ -1,3 +1,31 @@
-h1, h2 {
+body {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font: 400 2.5vh 'Open Sans', sans-serif;
+}
+
+h1,
+h2 {
   font-family: Lato;
+}
+
+button {
+  background-color: #555;
+  color: white;
+  font-size: 3vh;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding: 2vh 5vh;
+  margin-top: 5vh;
+  width: 70vw;
+  max-width: 500px;
+}
+
+.row {
+  border: 1px solid black;
+}
+
+.col-sm {
+  border: 2px solid pink;
 }

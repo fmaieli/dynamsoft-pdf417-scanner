@@ -2,33 +2,151 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web SDK Dynamsoft</title>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/html" href="style.css" />
   </head>
+
   <body>
-    <div id="div-video-container">
+    <script
+      src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"
+      data-productKeys="DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAyMDEyMDIxLVRYbFhaV0pRY205cVgyUmljZyIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21kbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAyMDEyMDIxIiwiY2hlY2tDb2RlIjoyMDkwNDg0NDgwfQ=="
+    ></script>
+    <script src="driverlicense.js"></script>
+
+    <div class="container">
+      <button class="btn btn-block" id="btnStarter">
+        <img
+          src="https://github.com/fmaieli/scandit-pdf417-scanner/blob/main/assets/qr-img.jpeg?raw=true"
+          width="250"
+          height="250"
+        />
+      </button>
+
+      <div class="col-md-8 order-md-1">
+        <form class="needs-validation" novalidate="">
+          <div class="row" id="nombreyapellido">
+            <div class="col-md-6 mb-3">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+          </div>
+          <div class="row" id="sexoydni">
+            <div class="col-md-6 mb-3">
+              <label for="sexo">Sexo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sexo"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="dni">DNI</label>
+              <input
+                type="text"
+                class="form-control"
+                id="dni"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+          </div>
+          <div class="row" id="nacyemision">
+            <div class="col-md-6 mb-3">
+              <label for="fechaNac">Fecha de Nacimiento</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fechaNac"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="fechaEmision">Fecha de Emisión</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fechaEmision"
+                placeholder=""
+                value=""
+                required=""
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div id="div-video-container">
       <select class="dbrScanner-sel-camera"></select
       ><select class="dbrScanner-sel-resolution"></select>
       <p>
         <video class="dbrScanner-video" playsinline="true"></video>
       </p>
     </div>
-    <div id="div-licenseInfo"></div>
+    <div id="div-licenseInfo"></div> -->
     <!--
         Please visit https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr&utm_source=github&package=js to get trial license.
     -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.4.0/dist/dbr.js"
-      data-productKeys="DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAyMDEyMDIxLVRYbFhaV0pRY205cVgyUmljZyIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21kbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAyMDEyMDIxIiwiY2hlY2tDb2RlIjoyMDkwNDg0NDgwfQ=="
-    ></script>
-    <script src="driverlicense.js"></script>
+
     <script>
+      Dynamsoft.DBR.BarcodeReader.license =
+        'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAyMDEyMDIxLVRYbFhaV0pRY205cVgyUmljZyIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21kbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAyMDEyMDIxIiwiY2hlY2tDb2RlIjoyMDkwNDg0NDgwfQ==';
+
       // scanner for decoding video
-      let pScanner = null;
-      (async () => {
-        let scanner = await (pScanner =
-          pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
-        await scanner.setUIElement(
-          document.getElementById('div-video-container')
-        );
+      let startScanBtn = document.getElementById('btnStarter'); // double check the ID of the button
+      startScanBtn.addEventListener('click', async function () {
+        let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 
         await scanner.updateRuntimeSettings('balance');
         let runtimeSettings = await scanner.getRuntimeSettings();
@@ -38,27 +156,95 @@
         runtimeSettings.deblurLevel = 3;
         await scanner.updateRuntimeSettings(runtimeSettings);
 
-        scanner.onFrameRead = (results) => console.log(results);
         scanner.onUnduplicatedRead = (txt) => {
-          alert('PDF417 found');
+          let decodeData = arrayDecodeData(txt);
+          console.log(decodeData);
 
-          // Get infos
-          let licenseInfo = parseDriverLicense(txt);
-          console.log('licenseInfo', licenseInfo);
+          document.getElementById('nombreyapellido').hidden = false;
+          $('#nombre').val(decodeData[2]);
+          $('#apellido').val(decodeData[1]);
 
-          // show
-          let div = document.getElementById('div-licenseInfo');
-          div.innerHTML = '';
-          for (let key in licenseInfo) {
-            let info = licenseInfo[key];
-            let p = document.createElement('p');
-            p.innerText = info.description + ': ' + info.content;
-            div.appendChild(p);
+          document.getElementById('sexoydni').hidden = false;
+          if (decodeData[3] == 'M') {
+            $('#sexo').val('Masculino');
+          } else {
+            $('#sexo').val('Femenino');
           }
+          $('#dni').val(decodeData[4]);
+
+          document.getElementById('nacyemision').hidden = false;
+          $('#fechaNac').val(decodeData[6]);
+          $('#fechaEmision').val(decodeData[7]);
+          scanner.hide();
         };
 
+        // scanner.onFrameRead = (results) => {
+        //   if ((results, length > 0)) {
+        //     console.log(results);
+        //     scanner.stop();
+        //   }
+        // };
+        // scanner.onUniqueRead = (txt, result) => {
+        //   alert(txt);
+        // };
+
         await scanner.show();
-      })();
+      });
+      function arrayDecodeData(string) {
+        let arrDecodedData = string.split('@');
+        return arrDecodedData;
+      }
+
+      // (async () => {
+      //   let scanner = await (pScanner =
+      //     pScanner || Dynamsoft.DBR.BarcodeScanner.createInstance());
+      //   await scanner.setUIElement(
+      //     document.getElementById('div-video-container')
+      //   );
+
+      //   await scanner.updateRuntimeSettings('balance');
+      //   let runtimeSettings = await scanner.getRuntimeSettings();
+      //   runtimeSettings.barcodeFormatIds =
+      //     Dynamsoft.DBR.EnumBarcodeFormat.BF_PDF417;
+      //   runtimeSettings.LocalizationModes = [2, 8, 0, 0, 0, 0, 0, 0];
+      //   runtimeSettings.deblurLevel = 3;
+      //   await scanner.updateRuntimeSettings(runtimeSettings);
+
+      //   scanner.onPlayed = async (info) => {
+      //     let sideLen = Math.min(info.width, info.height) * 0.4;
+      //     let precentW = Math.round((sideLen / info.width) * 100);
+      //     let precentH = Math.round((sideLen / info.height) * 100);
+      //     let rs = await scanner.getRuntimeSettings();
+      //     rs.region.regionLeft = (100 - precentW) / 2;
+      //     rs.region.regionRight = (100 + precentW) / 2;
+      //     rs.region.regionTop = (100 - precentH) / 2;
+      //     rs.region.regionBottom = (100 + precentH) / 2;
+      //     rs.region.regionMeasuredByPercentage = 1;
+      //     await scanner.updateRuntimeSettings(rs);
+      //   };
+
+      //   scanner.onFrameRead = (results) => console.log(results);
+      //   scanner.onUnduplicatedRead = (txt) => {
+      //     alert(txt);
+      //     alert('PDF417 found');
+
+      //     // Get infos
+      //     // let licenseInfo = parseDriverLicense(txt);
+      //     // console.log('licenseInfo', licenseInfo);
+
+      //     // // show
+      //     // let div = document.getElementById('div-licenseInfo');
+      //     // div.innerHTML = '';
+      //     // for (let key in licenseInfo) {
+      //     //   let info = licenseInfo[key];
+      //     //   let p = document.createElement('p');
+      //     //   p.innerText = info.description + ': ' + info.content;
+      //     //   div.appendChild(p);
+      //     // }
+      //   };
+
+      //   await scanner.show();
+      // })();
     </script>
   </body>
 </html>
